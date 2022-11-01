@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="compteARebours.css" />
+    <title> projet page web</title>
+    <script>
+        // affiche la date du jour fr
+        function dateDuJour() {
+            //console.log(Date())
+            const maDate = new Date()
+            document.getElementById("dateDuJour").innerHTML = "Nous sommes le : " + maDate.toLocaleDateString("fr");
+        }
+
+        //affiche l'heure du jour fr
+        function heureDuJour() {
+            //console.log(Date())
+            const maDate = new Date()
+            document.getElementById("heureDuJour").innerHTML = "Il est actuellement : " + maDate.toLocaleTimeString("fr");
+            // 
+        }
+
+        // permet de définir la valeur de départ du compte à rebours
+        function setTimer(timerValue) {
+            document.getElementById("affichageTimer").innerText = timerValue;
+            tabDuree = timerValue.split(":");
+            // on veut le temps en secondes
+            temps = parseInt(tabDuree[0]) * 3600 + parseInt(tabDuree[1]) * 60 + parseInt(tabDuree[2]);
+        }
+
+        // fait baisser le compte à rebours
+        function timer() {
+            let heure = parseInt(temps / 3600, 10);
+            let minutes = parseInt((temps % 3600) / 60, 10);
+            let secondes = parseInt(temps % 60, 10);
+
+            heure = heure < 10 ? "0" + heure : heure;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            secondes = secondes < 10 ? "0" + secondes : secondes;
+
+            if (timerStarted) {
+                document.getElementById("affichageTimer").innerText = heure + ":" + minutes + ":" + secondes;
+
+                if (temps <= 0) {
+                    temps = 0;
+                    // jouer un son
+                    var audio = new Audio('son.wav');
+                    audio.play();
+
+                    //arreter de répéter le timer
+                    clearInterval(idInterval);
+                    //re initialisation du boutton start
+                    document.getElementById('btnStart').setAttribute("value", "START");
+                } else {
+                    // on décrémente le temps d'une seconde
+                    temps = temps - 1;
+                }
+            } else {
+                // on arrete le timer
+                clearInterval(idInterval);
+            }
+        }
+        // BONUS : permet d'agrandir le timer
+        function agrandir() {
+            console.log("agrandir :" + document.getElementById("affichageTimer").style.fontSize)
+            var el = document.getElementById('affichageTimer');
+            var style = window.getComputedStyle(el, null).getPropertyValue('font-size');
+            var fontSize = parseFloat(style);
+            el.style.fontSize = (fontSize + 10) + 'px'
+        }
+        // BONUS : permet de rétrécire le timer
+        function reduire() {
+            console.log("reduire :" + document.getElementById("affichageTimer").style.fontSize)
+            var el = document.getElementById('affichageTimer');
+            var style = window.getComputedStyle(el, null).getPropertyValue('font-size');
+            var fontSize = parseFloat(style);
+            el.style.fontSize = (fontSize - 10) + 'px'
+        }
+
+        // gestion du bouton "démarrer"
+        function startButton(leBoutton) {
+            if (timerStarted) {
+                leBoutton.value = "START";
+                timerStarted = false;
+            } else {
+                leBoutton.value = "STOP";
+                timerStarted = true;
+                idInterval = setInterval(timer, 1000);
+            }
+        }
+
+        //
+        function personnaltimer(theForm) {
+            console.log(theForm.personnalTime.value);
+            setTimer(theForm.personnalTime.value);
+        }
+
+        //initialisation des variables
+        let timerStarted = false; // indique si le compte à rebours est démarré 
+        let temps = 0; // contient la durée a faire défiler en seconde
+        let idInterval = 0; // identifiant de l'interval lancé
+    </script>
+
+</head>
+
+<body>
+    <div id="txt"> </div>
+    <h1>
+        Eléa Heijligers
+        <br>
+        Terminale 3
+    </h1>
+    <div id="dateDuJour"></div>
+    <div id="heureDuJour"></div>
+    <br>
+    <em><mark>
+            <h2> Vous pouvez voir et modifier le temps qu'il vous reste pour votre évaluation :</h2>
+        </mark></em>
+    <br>
+
+
+    <img src="LogoSophieBarat.jpg" alt="logo établissement Sophie Barat ">
+
+
+
+    <div id="conteneurTimer">
+        <div id="affichageTimer">
+            __:__:__
+        </div>
+        <div id="elementbtnStart">
+            <input type="button" value="START" id="btnStart" onclick="startButton(this);">
+            <br>
+            <div id="agrandir" onclick="agrandir();" title="Agrandir">+</div>
+            <div id="reduire" onclick="reduire();" title="Réduire">-</div>
+        </div>
+    </div>
+
+    <div id="phraseChoix">Choississez combien de temps durera l'évaluation : </div>
+
+    <input type="button" value="Ré-initialisation" onclick="document.location.reload(true)">
+    <input type="button" value="5 min" onclick="setTimer('00:05:00');">
+    <input type="button" value="10 min" onclick="setTimer('00:10:00');">
+    <input type="button" value="15 min" onclick="setTimer('00:15:00');">
+    <input type="button" value="20 min" onclick="setTimer('00:20:00');">
+    <input type="button" value="25 min" onclick="setTimer('00:25:00');">
+    <input type="button" value="30 min" onclick="setTimer('00:30:00');">
+    <input type="button" value="1h" onclick="setTimer('01:00:00');">
+    <input type="button" value="2h" onclick="setTimer('02:00:00');">
+    <form action="javascript:personnaltimer(this);">
+        <label for="personnalTime">Autre:</label>
+        <input type="tel" id="personnalTime" name="personnalTime" placeholder="01:30:00"
+            pattern="[0-9]{2}:[0-9]{2}:[0-9]{2}" required>
+        <small>Format: hh:mm:ss</small>
+        <input type="submit" value="OK">
+    </form>
+    <input type="color" id="favcolor" name="favcolor">
+
+    <script>
+        //affichage de la date et l'heure du jour
+        dateDuJour();
+        setInterval(heureDuJour, 1000);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="compteARebours.css" />
+    <title> projet page web</title>
+    <script type="text/javascript" src="compteARebours.js"></script>
+</head>
+
+<body>
+    <div id="txt"> </div>
+    <h1>
+        Eléa Heijligers -
+        Terminale 3
+    </h1>
+    <div id="dateDuJour"></div>
+    <div id="heureDuJour"></div>
+    <br>
+    <em><mark>
+            <h2> Vous pouvez voir et modifier le temps qu'il vous reste pour votre évaluation :</h2>
+        </mark></em>
+    <br>
+
+    <img src="LogoSophieBarat.jpg" alt="logo établissement Sophie Barat">
+
+    <div id="conteneurTimer">
+        <div id="affichageTimer">
+            __:__:__
+        </div>
+        <div id="elementbtnStart">
+            <input type="button" value="START" id="btnStart" onclick="startButton(this);">
+            <br>
+            <div id="agrandir" onclick="agrandir();" title="Agrandir">+</div>
+            <div id="reduire" onclick="reduire();" title="Réduire">-</div>
+        </div>
+    </div>
+
+    <div id="phraseChoix">Choississez combien de temps durera l'évaluation : </div>
+
+    <input type="button" value="Ré-initialisation" onclick="document.location.reload(true)">
+    <input type="button" value="5 min" onclick="setTimer('00:05:00');">
+    <input type="button" value="10 min" onclick="setTimer('00:10:00');">
+    <input type="button" value="15 min" onclick="setTimer('00:15:00');">
+    <input type="button" value="20 min" onclick="setTimer('00:20:00');">
+    <input type="button" value="25 min" onclick="setTimer('00:25:00');">
+    <input type="button" value="30 min" onclick="setTimer('00:30:00');">
+    <input type="button" value="1h" onclick="setTimer('01:00:00');">
+    <input type="button" value="2h" onclick="setTimer('02:00:00');">
+    <form action="javascript:personnaltimer(this);">
+        <label for="personnalTime">Autre:</label>
+        <input type="tel" id="personnalTime" name="personnalTime" placeholder="01:30:00"
+            pattern="[0-9]{2}:[0-9]{2}:[0-9]{2}" required>
+        <small>Format: hh:mm:ss</small>
+        <input type="submit" value="OK">
+    </form>
+    <input type="color" id="favcolor" name="favcolor">
+
+    <script>
+        //affichage de la date et l'heure du jour
+        dateDuJour();
+        setInterval(heureDuJour, 1000);
+
+    </script>
+</body>
+
+</html>
