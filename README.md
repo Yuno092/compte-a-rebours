@@ -1,7 +1,6 @@
 # compte-a-rebours
 Interactions entre l’homme et la machine sur le Web
-
-1
+NSI TERMINALE Langages Web
 
 Objectif :
 Concevoir une page Web qui a pour vocation d’informer les élèves du
@@ -17,33 +16,28 @@ Conditions :
 - Modalités de travail : Individuelle
 - Modalités d’accompagnement : En autonomie
 - Modalités de restitution : Sur poste informatique
-Cahier des charges :
- Etre constitué d’une seule page ;
- Afficher la date, l’heure et un minuteur ;
- Pouvoir sélectionner différents temps : 5, 10, 15, 20, 25, 30 ou + ;
- Afficher l’heure à l’aide d’un affichage numérique ;
- Choisir entre un affichage par une horloge mécanique ou un bandeau
+# Cahier des charges :
+[] Etre constitué d’une seule page ;
+[] Afficher la date, l’heure et un minuteur ;
+[] Pouvoir sélectionner différents temps : 5, 10, 15, 20, 25, 30 ou + ;
+[] Afficher l’heure à l’aide d’un affichage numérique ;
+[] Choisir entre un affichage par une horloge mécanique ou un bandeau
 défilant pour le minuteur (deux versions de page sont possibles) ;
- Emettre un son à la fin de la minuterie ;
- Fonctionner sur les différents navigateurs Web (Firefox, Edge,
+[] Emettre un son à la fin de la minuterie ;
+[] Fonctionner sur les différents navigateurs Web (Firefox, Edge,
 Google) ;
- Etre visible de tous les élèves ;
- Etre esthétique, utiliser les codes couleurs et le logo de
+[] Etre visible de tous les élèves ;
+[] Etre esthétique, utiliser les codes couleurs et le logo de
 l’établissement.
- Faire preuve de créativité, initiative libre en plus du contenu imposé.
+[] Faire preuve de créativité, initiative libre en plus du contenu imposé.
 
-NSI TERMINALE Langages Web
 
-Interactions entre l’homme et la machine sur le Web
-
-2
-
-Charte graphique :
+# Charte graphique :
 
 - Respecter la charte de graphique du logo du Groupe
 Scolaire Sophie Barat.
 
-Délais :
+# Délais :
 - Mardi 26 octobre 17h00 : Restituer le prototype ou story board
 - Lundi 8 novembre : Restituer le projet de page web
 Modalités de restitution :
@@ -58,6 +52,4 @@ sous la forme d’une archive contenant les dossiers, sous-dossiers
 et fichiers. Le nom de l’archive doit permettre de vous identifier
 (Nom_Prénom_ProjetPageWeb)
 
-Ressources :
-Des ressources vous sont accessibles dans un répertoire Projet Page
-Web sur le Cloud NSI.
+
