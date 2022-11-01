@@ -2,7 +2,7 @@
 Interactions entre l’homme et la machine sur le Web
 NSI TERMINALE Langages Web
 
-Objectif :
+# Objectif :
 Concevoir une page Web qui a pour vocation d’informer les élèves du
 jour, de l’heure et du temps qui leur reste pour une évaluation. Ce temps
 d’évaluation peut varier et être choisi par l’enseignant.
@@ -17,7 +17,8 @@ Conditions :
 - Modalités d’accompagnement : En autonomie
 - Modalités de restitution : Sur poste informatique
 # Cahier des charges :
-[ ] Etre constitué d’une seule page ;
+
+- [ ] Etre constitué d’une seule page ;
 [ ] Afficher la date, l’heure et un minuteur ;
 [ ] Pouvoir sélectionner différents temps : 5, 10, 15, 20, 25, 30 ou + ;
 [ ] Afficher l’heure à l’aide d’un affichage numérique ;
