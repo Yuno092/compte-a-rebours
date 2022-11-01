@@ -1,4 +1,4 @@
-# compte-a-rebours
+# Compte à-rebours
 Interactions entre l’homme et la machine sur le Web
 NSI TERMINALE Langages Web
 
@@ -17,19 +17,19 @@ Conditions :
 - Modalités d’accompagnement : En autonomie
 - Modalités de restitution : Sur poste informatique
 # Cahier des charges :
-[] Etre constitué d’une seule page ;
-[] Afficher la date, l’heure et un minuteur ;
-[] Pouvoir sélectionner différents temps : 5, 10, 15, 20, 25, 30 ou + ;
-[] Afficher l’heure à l’aide d’un affichage numérique ;
-[] Choisir entre un affichage par une horloge mécanique ou un bandeau
+[ ] Etre constitué d’une seule page ;
+[ ] Afficher la date, l’heure et un minuteur ;
+[ ] Pouvoir sélectionner différents temps : 5, 10, 15, 20, 25, 30 ou + ;
+[ ] Afficher l’heure à l’aide d’un affichage numérique ;
+[ ] Choisir entre un affichage par une horloge mécanique ou un bandeau
 défilant pour le minuteur (deux versions de page sont possibles) ;
-[] Emettre un son à la fin de la minuterie ;
-[] Fonctionner sur les différents navigateurs Web (Firefox, Edge,
+[ ] Emettre un son à la fin de la minuterie ;
+[ ] Fonctionner sur les différents navigateurs Web (Firefox, Edge,
 Google) ;
-[] Etre visible de tous les élèves ;
-[] Etre esthétique, utiliser les codes couleurs et le logo de
+[ ] Etre visible de tous les élèves ;
+[ ] Etre esthétique, utiliser les codes couleurs et le logo de
 l’établissement.
-[] Faire preuve de créativité, initiative libre en plus du contenu imposé.
+[ ] Faire preuve de créativité, initiative libre en plus du contenu imposé.
 
 
 # Charte graphique :
