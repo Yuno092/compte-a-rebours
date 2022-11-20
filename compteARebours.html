@@ -17,11 +17,10 @@
     </h1>
     <div id="dateDuJour"></div>
     <div id="heureDuJour"></div>
-    <br>
+
     <em><mark>
             <h2> Vous pouvez voir et modifier le temps qu'il vous reste pour votre évaluation :</h2>
         </mark></em>
-    <br>
 
     <img src="LogoSophieBarat.jpg" alt="logo établissement Sophie Barat">
 
@@ -48,14 +47,15 @@
     <input type="button" value="30 min" onclick="setTimer('00:30:00');">
     <input type="button" value="1h" onclick="setTimer('01:00:00');">
     <input type="button" value="2h" onclick="setTimer('02:00:00');">
+    <br>
     <form action="javascript:personnaltimer(this);">
+        <br>
         <label for="personnalTime">Autre:</label>
         <input type="tel" id="personnalTime" name="personnalTime" placeholder="01:30:00"
             pattern="[0-9]{2}:[0-9]{2}:[0-9]{2}" required>
         <small>Format: hh:mm:ss</small>
         <input type="submit" value="OK">
     </form>
-    <input type="color" id="favcolor" name="favcolor">
 
     <script>
         //affichage de la date et l'heure du jour

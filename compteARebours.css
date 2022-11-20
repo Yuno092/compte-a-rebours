@@ -16,6 +16,7 @@ html {
     justify-content: center;
     align-items: center;
     height: 100%;
+    font-size: 30px;
 }
 
 #phraseChoix {
@@ -31,6 +32,7 @@ input {
     color: white;
     font-size: 40px;
     text-align: center;
+    margin: 10px;
 }
 
 img {
@@ -66,4 +68,10 @@ img {
     float: right;
     color: black;
     font-size: 60px;
+}
+
+#form {
+    color: rgb(28, 84, 214);
+    font-size: 40px;
+    margin: 15px;
 }
