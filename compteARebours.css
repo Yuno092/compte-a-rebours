@@ -64,9 +64,9 @@ img {
     text-align: center;
 }
 
-#elementbtnStart {
+#btnStart {
     float: right;
-    color: black;
+    color: white;
     font-size: 60px;
 }
 
